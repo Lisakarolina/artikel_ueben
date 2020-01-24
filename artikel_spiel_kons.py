@@ -61,16 +61,6 @@ def check_input(user_input):
     return user_input
 
 
-
-def evaluate1(user_input):
-
-    """evaluate the user's input. Repeating the question is conditioned upon the return value"""
-    
-    if user_input == art:
-        return True
-
-    else:
-        return False
     
 
 
@@ -276,7 +266,7 @@ while True:
     subst = pair[1]
     art = pair[0]
 
-    if not evaluate1(check_input(request_user_input())):
+    if not check_input(request_user_input()) == art:
         printout_evaluation1(False)
         get_cues()
         # if input() == 'q':  # Frage: gibt man dem Nutzer so die Möglichkeit, das Spiel jederzeit abbrechen zu können ? und warum funktioniert's nicht?
